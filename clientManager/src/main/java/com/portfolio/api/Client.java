@@ -20,7 +20,7 @@ public class Client {
     @Valid
     UUID idClient;
 
-    //@JsonProperty(value = "name_diff")   // When the name in POSTman is different then here, if it is the same you have to put it anyways
+    //@JsonProperty(value = "name_diff")   // When the name in POSTMAN is different then here, if it is the same you have to put it anyway
     @JsonProperty(value = "name")
     @NotNull
     @Valid
