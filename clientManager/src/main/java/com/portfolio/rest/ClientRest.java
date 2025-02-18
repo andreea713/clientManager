@@ -22,5 +22,13 @@ public class ClientRest {
         return clientApi.getClients();
     }
 
+    @PutMapping("/updateClient")
+    public void updateClient(@RequestBody Client client){
+        clientApi.updateClient(client);
+    }
 
+    @DeleteMapping("/deleteClient/{idClient}")
+    public void deleteClient(@PathVariable("idClient") String idClient){
+        clientApi.deleteClient(idClient);
+    }
 }
