@@ -1,6 +1,7 @@
 package com.portfolio.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
@@ -14,6 +15,7 @@ import java.util.UUID;
 @Builder(toBuilder = true)  // Builder replaces the constructor / toBuilder allows to modify the objects
 @Value                      // Create a private constructor, equals, hasCode, toString and make the class final
 @Jacksonized                // Allows jackson to deserialize the object sent from Postman
+@JsonTypeName("Client")
 public class Client {
 
     @JsonProperty(value = "idClient")
